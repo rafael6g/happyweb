@@ -1,3 +1,5 @@
+// const { saveOrphanage } = require("../../src/pages/");
+
 // create map
 var map = L.map('mapid').setView([-23.2842481,-51.1857014], 15)
 
@@ -9,7 +11,7 @@ L.tileLayer(
 
 // create icon
 const icon = L.icon({
-  iconUrl: "./public/images/map-marker.svg",
+  iconUrl: "./images/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor:[29, 68],
 })
@@ -88,4 +90,14 @@ function toggleSelect(event) {
   const input = document.querySelector('[name="open_on_weekends"]')
   
   input.value = button.dataset.value
+}
+
+function validate(event) {
+  const needsLatAndLng = document.querySelector('span[data-lat]')
+  
+  if(needsLatAndLng.value == "") {
+    alert('Selecionando um ponto no mapa')  // sempre que encontrar o return ela para de executar o codigo abaixo
+    event.preventDefault()
+  }
+  console.log(saveOrphanage)
 }

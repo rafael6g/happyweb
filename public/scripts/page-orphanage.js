@@ -5,9 +5,12 @@ const options = {
   scrollWheelZoom: false,
   zoomControl: false,
 }
+// get values map orphanage from html
+const lat = document.querySelector('span[data-lat]').dataset.lat
+const lng = document.querySelector('span[data-lng]').dataset.lng
 
 // create map
-var map = L.map('mapid', options).setView([-23.2842481,-51.1857014], 17)
+var map = L.map('mapid', options).setView([lat,lng], 17)
 
 // create and add tileLayer
 L.tileLayer(
@@ -17,15 +20,17 @@ L.tileLayer(
 
 // create icon
 const icon = L.icon({
-  iconUrl: "./public/images/map-marker.svg",
+  iconUrl: "./images/map-marker.svg",
   iconSize: [58, 68],
   iconAnchor:[29, 68],
   popupAnchor: [170, 2]
 })
 
 
-// pop-up
-L.marker([-23.2842481,-51.1857014], { icon })
+// create and add marker
+
+
+L.marker([lat,lng], { icon })
   .addTo(map)
  
 
