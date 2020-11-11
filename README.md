@@ -2,5 +2,5 @@
 
 https://happyweb.rafael6g.com.br/
 
-![alt text](https://github.com/rafael6g/happyweb/blob/main/github/happyweb.png?raw=true)
+![alt text](https://github.com/rafael6g/happyweb/blob/main/github/happyweb.git?raw=true)
 ROCKETSEAT - Semana NWL 3 - Mayco Britto
